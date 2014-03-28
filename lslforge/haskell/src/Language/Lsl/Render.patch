@@ -119,7 +119,7 @@
 >         (PreInc va) -> renderString "++" . renderVarAccess va
 >         (PreDec va) -> renderString "--" . renderVarAccess va
 >     where
->         lo = \ t -> isLower ex t || needsBooleanParens ex t
+>         lo = \ t -> isLower ex t || needsBooleanParens ex t || castCast ex t
 207,208c211,213
 < renderBinExpr op expr1 expr2 = renderChar '(' . renderCtxExpr expr1 . renderChar ' ' .
 <                                renderString op . renderChar ' ' . renderCtxExpr expr2 . renderChar ')'
@@ -131,7 +131,7 @@
 <     renderChar '(' . renderVarAccess va . renderChar ' ' . renderString op . renderChar ' ' . renderCtxExpr expr . renderChar ')'
 ---
 >     renderVarAccess va . renderChar ' ' . renderString op . renderChar ' ' . renderCtxExpr expr
-236c241,312
+236c241,320
 < renderPreText1 f = maybe (renderString "\n" . f) (renderString . srcPreText)
 \ No newline at end of file
 ---
@@ -153,6 +153,14 @@
 >             (Or _ _) -> case ex1 of
 >                                 (And _ _) -> True
 >                                 _ -> False
+>             _ -> False
+> 
+> castCast :: Expr -> Ctx Expr -> Bool
+> castCast ex0 (Ctx _ ex1) =
+>         case ex0 of
+>             (Cast _ _) -> case ex1 of
+>                                (Cast _ _) -> True
+>                                _ -> False
 >             _ -> False
 > 
 > -- Comparing Order of Precedence
