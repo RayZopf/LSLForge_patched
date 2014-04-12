@@ -15,7 +15,7 @@ Copyright:	    Copyright (c) Robert Greayer 2008-2010, Others 2011-2012
 Author:         Robert Greayer <robgreayer@yahoo.com>
 Maintainer:	    "Newfie Pendragon" <elnewfie@yahoo.com>
 Stability:	    experimental
-Build-Type:     Simple
+Build-Type:     Custom
 Tested-With:	GHC ==6.10.4
 Extra-source-files: NOTICE
 data-files:     

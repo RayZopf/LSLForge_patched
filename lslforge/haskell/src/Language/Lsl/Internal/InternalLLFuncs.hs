@@ -125,6 +125,7 @@ import qualified Data.ByteString.Lazy as L
 import qualified Data.Digest.Pure.MD5 as MD5
 import qualified Data.ByteString.UTF8 as UTF8
 import Network.URI(escapeURIChar,unEscapeString)
+import Codec.Binary.UTF8.String(encodeString,decodeString)
 
 internalLLFuncNames :: [String]
 internalLLFuncNames = map fst (internalLLFuncs :: (Read a, RealFloat a) => [(String, a -> [LSLValue a] -> Maybe (EvalResult,LSLValue a))])
@@ -264,10 +265,10 @@ escapeURL (c:cs) n =
 maxResult = 254::Int
       
 llEscapeURL _ [SVal string] =
-    continueWith $ SVal $ escapeURL string maxResult
+    continueWith $ SVal $ escapeURL (encodeString string) maxResult
     
 llUnescapeURL _ [SVal string] = 
-    continueWith $ SVal $ take maxResult $ unEscapeString string
+    continueWith $ SVal $ decodeString $ take maxResult $ unEscapeString string
  
 llMD5String _ [SVal string, IVal nonce] =
     continueWith $ SVal $ (show . MD5.md5 . L.pack . B.unpack . UTF8.fromString) (string ++ ":" ++ show nonce)   
