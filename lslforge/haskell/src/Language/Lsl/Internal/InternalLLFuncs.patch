@@ -1,0 +1,10 @@
+127a128
+> import Codec.Binary.UTF8.String(encodeString,decodeString)
+267c268
+<     continueWith $ SVal $ escapeURL string maxResult
+---
+>     continueWith $ SVal $ escapeURL (encodeString string) maxResult
+270c271
+<     continueWith $ SVal $ take maxResult $ unEscapeString string
+---
+>     continueWith $ SVal $ decodeString $ take maxResult $ unEscapeString string
