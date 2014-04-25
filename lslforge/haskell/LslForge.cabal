@@ -1,5 +1,5 @@
 Name:           LSLForge
-version:        0.1.6
+version:        0.1.6.1
 Synopsis:	    An execution and testing framework for the Linden Scripting Language (LSL)
 Description:	
 	Provides a framework for executing Linden Scripting Language scripts offline,
@@ -203,14 +203,27 @@ data-files:
                 lslforge/haskell/Setup.hs
 
 Executable LSLForge
-  Build-Depends:  base >= 4.0 && < 5, haskell98, 
-     filepath >= 1.1.0.0 && < 1.2, parsec >= 2.1.0.0 && < 3, 
-     HaXml >= 1.19 && < 1.20, directory > 1 && < 1.1, array >= 0.2 && < 0.3,
-     monads-fd > 0.0 && < 0.1, transformers >= 0.1 && < 0.2, 
-     network >= 2.1 && < 2.3, random >= 1.0, containers >= 0.1 && < 0.3,
-     old-time, utf8-string >= 0.3 && < 0.4, pureMD5 >= 0.2 && < 3, 
-     bytestring >= 0.9 && < 0.10, template-haskell >= 2.3.0.0 && < 2.4, 
-     syb >= 0.1.0.0 && < 0.2.0.0, fclabels > 0.4 && < 0.5
+  Build-Depends:  
+     base >= 4.0 && < 5,
+     haskell98,
+     filepath >= 1.1.0.0 && < 1.2,
+     parsec >= 2.1.0.0 && < 3,
+     HaXml >= 1.19 && < 1.20,
+     directory > 1 && < 1.1,
+     array >= 0.2 && < 0.3,
+     monads-fd > 0.0 && < 0.1,
+     transformers >= 0.1 && < 0.2,
+     network >= 2.1 && < 2.3,
+     random >= 1.0,
+     containers >= 0.1 && < 0.3,
+     old-time,
+     utf8-string >= 0.3 && < 0.4,
+     pureMD5 >= 0.2 && < 3,
+     bytestring >= 0.9 && < 0.10,
+     template-haskell >= 2.3.0.0 && < 2.4,
+     syb >= 0.1.0.0 && < 0.2.0.0,
+     fclabels > 0.4 && < 0.5,
+     json
   Main-Is:        LslForge.hs
   Hs-Source-Dirs: 
                   src, 
