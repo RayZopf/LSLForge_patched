@@ -1,0 +1,12 @@
+2c2
+< version:        0.1.6
+---
+> version:        0.1.6.1
+14c14
+< Copyright:	    Copyright (c) Robert Greayer 2008-2010, Others 2011-2012
+---
+> Copyright:	    Copyright (c) Robert Greayer 2008-2010, Others 2011-2014
+30c30
+<      syb >= 0.1.0.0 && < 0.2.0.0, fclabels > 0.4 && < 0.5
+---
+>      syb >= 0.1.0.0 && < 0.2.0.0, fclabels > 0.4 && < 0.5, json == 0.7.*
