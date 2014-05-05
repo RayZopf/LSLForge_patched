@@ -11,7 +11,7 @@ import Data.Version (Version(..))
 import System.Environment (getEnv)
 
 version :: Version
-version = Version {versionBranch = [0,1,6,1], versionTags = []}
+version = Version {versionBranch = [0,1,6,2], versionTags = []}
 
 prefix, bindirrel :: FilePath
 prefix        = "C:\\Program Files (x86)\\Haskell"
@@ -21,13 +21,13 @@ getBinDir :: IO FilePath
 getBinDir = getPrefixDirRel bindirrel
 
 getLibDir :: IO FilePath
-getLibDir = getPrefixDirRel "LSLForge-0.1.6.1\\ghc-6.10.4"
+getLibDir = getPrefixDirRel "LSLForge-0.1.6.2\\ghc-6.10.4"
 
 getDataDir :: IO FilePath
-getDataDir =  catch (getEnv "LSLForge_datadir") (\_ -> getPrefixDirRel "LSLForge-0.1.6.1")
+getDataDir =  catch (getEnv "LSLForge_datadir") (\_ -> getPrefixDirRel "LSLForge-0.1.6.2")
 
 getLibexecDir :: IO FilePath
-getLibexecDir = getPrefixDirRel "LSLForge-0.1.6.1"
+getLibexecDir = getPrefixDirRel "LSLForge-0.1.6.2"
 
 getDataFileName :: FilePath -> IO FilePath
 getDataFileName name = do
