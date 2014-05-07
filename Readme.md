@@ -1,4 +1,4 @@
-This is enhanced [LSLForge](https://code.google.com/p/lslforge/)
+Main intention of this repo is to provides an enhanced [LSLForge](https://code.google.com/p/lslforge/) (haskell) executable
 ==
 _using LSLForge 0.1.6, LSLForge executable 0.1.3_  
 _(06. May 2014, LSLForge.exe 0.1.6.2)_  
@@ -45,7 +45,7 @@ C:/Program Files/Java/jre6/bin/javaw.exe
 -Xmx512m
 ```
 
-How to build LSLForge yourself
+How to build LSLForge executable yourself
 --
 get ancient Haskell version -  
 as Haskell platform download is missing, get below GHC version and install needed packages manually!  
@@ -79,19 +79,19 @@ as there are some issues with [cabal/dependencies](https://code.google.com/p/lsl
 
 Added patches
 --
-###from [Issues](https://code.google.com/p/lslforge/issues/list) list
- - [#26, missing ';'](https://code.google.com/p/lslforge/issues/detail?id=26)
- - [#3, parenthesis/OpenSIM compatibility](https://code.google.com/p/lslforge/issues/detail?id=3)
- - [#9/1/10, handling of variables](https://code.google.com/p/lslforge/issues/detail?id=9)
- - [#40/18, Json/UTF8](https://code.google.com/p/lslforge/issues/detail?id=40)  
+###From [Issues](https://code.google.com/p/lslforge/issues/list) list
+ - [#26, missing ';' in AvEventHandler.lslm](https://code.google.com/p/lslforge/issues/detail?id=26)
+ - [#3, parenthesis/OpenSIM compatibility (haskell code)](https://code.google.com/p/lslforge/issues/detail?id=3)
+ - [#9/1/10, handling of variables (haskell code)](https://code.google.com/p/lslforge/issues/detail?id=9)
+ - [#40/18, Json/UTF8 (haskell code)](https://code.google.com/p/lslforge/issues/detail?id=40)  
 
-###From [clone](https://code.google.com/r/raysilent-2014/source/list)
+###From [clone](https://code.google.com/r/raysilent-2014/source/list) (haskell code)
  - [llScaleByFactor, llGetMinScaleFactor, llGetMaxScaleFactor definitions added](https://code.google.com/r/raysilent-2014/source/detail?r=0a3b0f120ab6e908eb1c0ac2abb3908765cbc886)
  - [Comments added to several event tips about their execution sequence](https://code.google.com/r/raysilent-2014/source/detail?r=f5eb60ccdb6380cc50456d4c6478cfed433bfb17)
  - [PSYS_PART_BLEND_FUNC_*, PSYS_PART_BF_* family](https://code.google.com/r/raysilent-2014/source/detail?r=f638f5ffbe97aa722c35930b115a4c5f9fd30790)
  
 What to do with Win32 LSLForge.exe
 --
-get precompiled [LSLForge](https://github.com/RayZopf/LSLForge_patched/tree/master/lslforge/haskell/dist/build/LSLForge)  
+get precompiled [patched LSLForge  executable](https://github.com/RayZopf/LSLForge_patched/tree/master/lslforge/haskell/dist/build/LSLForge) from this repo  
 replace current LSLForge.exe found in path-to-eclipse\plugins\lslforge_win32_x86_0.1.6\os\win32\x86  
 verify by any updated/recompiled lsl files and changed header message (enhanced first line)
