@@ -95,6 +95,8 @@ What to do with Win32 LSLForge.exe
 get precompiled [patched LSLForge  executable](https://github.com/RayZopf/LSLForge_patched/tree/master/lslforge/haskell/dist/build/LSLForge) from this repo  
 replace current LSLForge.exe found in path-to-eclipse\plugins\lslforge_win32_x86_0.1.6\os\win32\x86  
 verify by any updated/recompiled lsl files and changed header message (enhanced first line)  
+
+**I got feedback the exe is not working on Win8-64 _(comment accidentially removed)_, so I added cygwin 'file' and 'ldd' output for you to check. https://github.com/RayZopf/LSLForge_patched/commit/e7c8f814c5065f4fa066b9ccfd47f62e424e4435**
   
   
   
