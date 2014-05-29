@@ -4,7 +4,8 @@ _using LSLForge 0.1.6, LSLForge executable 0.1.3_
 _(06. May 2014, LSLForge.exe 0.1.6.2)_  
  - added patches from [Issues list](https://code.google.com/p/lslforge/issues/list)  
  - added changes from [RaySilent's 2014s clone](https://code.google.com/r/raysilent-2014/)
-
+ - for discussion about this repo see [Issue #45](https://code.google.com/p/lslforge/issues/detail?id=45)
+  
 LSLForge and Eclipse
 --
 if you want to use SIM editor you need to use _Java 6_ **_(outdated, no longer gets public security updates, not recommended)_**,  
