@@ -6,6 +6,10 @@ _(06. May 2014, LSLForge.exe 0.1.6.2)_
  - added changes from [RaySilent's 2014s clone](https://code.google.com/r/raysilent-2014/)
  - for discussion about this repo see [Issue #45](https://code.google.com/p/lslforge/issues/detail?id=45)
   
+__BUG: (float-variable = number-a / number-b) get's calculated to (f-v = 0); use f-v = a.n / b.m__  
+not (val = 4 / 5) but (val = 4.0 / 5.0)  
+have not tested if the bug is in main LSLForge too, or if only this patched version exposes this miscalculation
+  
 LSLForge and Eclipse
 --
 if you want to use SIM editor you need to use _Java 6_ **_(outdated, no longer gets public security updates, not recommended)_**,  
