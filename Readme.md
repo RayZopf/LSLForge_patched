@@ -1,4 +1,18 @@
-Main intention of this repo is to provides an enhanced [LSLForge](https://code.google.com/p/lslforge/) (haskell) executable
+THIS REPO IS DEPRECATED
+==
+(still usefull regarding build environment, need for json == 0.7.* + text and the float varibale bug)
+==
+PLEASE GO TO:
+https://github.com/raysilent/lslforge  
+and fork that one, it has  
+ - fixes for the SIM Editor (no more Java 6 needed!)  
+ - hopefully all the patches that were integrated here  
+ - support for later added LSL functions and variables
+ - some more fixes  
+  
+  
+  
+Main intention of this repo is to provides an enhanced [LSLForge](https://code.google.com/p/lslforge/) (haskell) executable  
 ==
 _using LSLForge 0.1.6, LSLForge executable 0.1.3_  
 _(06. May 2014, LSLForge.exe 0.1.6.2)_  
